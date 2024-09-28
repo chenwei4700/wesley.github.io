@@ -141,3 +141,194 @@ button {
 .input-data input:valid~.underline:before {
     transform: scaleX(1);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.outside {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+.wrong {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+.img-text-container {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-text-container img {
+    width: 45px;
+    height: 90px;
+}
+
+.img-text-container h2 {
+    margin-top: 15px;
+}
+
+.outside li {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.outside .img-text-container h2 {
+    margin-bottom: 50px;
+}
+
+button {
+    width: 220px;
+}
+
+.button {
+    margin-bottom: 10px;
+    width: 450px;
+}
+
+.sent {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wrapper {
+    width: 450px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .input-data {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .input-data input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
+}
+
+.input-data input:focus~.underline:before,
+.input-data input:valid~.underline:before {
+    transform: scaleX(1);
+}
+
+/* RWD - 手機版 (最大寬度 768px) */
+@media (max-width: 768px) {
+    .outside {
+        width: 90%; /* 讓容器寬度適應較小的螢幕 */
+        height: auto;
+    }
+
+    .img-text-container {
+        flex-direction: column; /* 圖片和文字在手機上垂直排列 */
+        text-align: center;
+    }
+
+    .img-text-container img {
+        width: 40px;
+        height: 80px;
+    }
+
+    .img-text-container h2 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    button, .button {
+        width: 100%; /* 讓按鈕在手機上佔滿寬度 */
+        margin-bottom: 15px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none; /* 移除小螢幕的陰影效果 */
+    }
+
+    .input-data input {
+        font-size: 15px;
+    }
+}
+
+/* RWD - 平板橫向 (最大寬度 1024px) */
+@media (max-width: 1024px) {
+    .outside {
+        width: 80%;
+        height: auto;
+    }
+
+    .img-text-container img {
+        width: 50px;
+        height: 100px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    button, .button {
+        width: 100%;
+    }
+}
