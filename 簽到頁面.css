@@ -164,8 +164,8 @@ button {
     }
 
     
-    .button .btn {
-        font-size: 13px; /* 設定字體大小 */
+     .button .btn {
+        font-size: 10px; /* 設定字體大小 */
     }
 
     button{
@@ -174,8 +174,8 @@ button {
 
     .button{
         width: 90%;
+        display: flex;
     }
-
 
     .wrapper {
         width: 100%;
