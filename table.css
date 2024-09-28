@@ -1,72 +1,83 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 * {
     margin: 0;
     padding: 0;
-    outline: none;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
-.circle1 {
-    top: 20px; /* 圓形相對於圖片的位置 */
-    left: 50px;
-}
-
-.circle2 {
-    top: 20px;
-    left: 120px;
-}
-
-.circle3 {
-    top: 20px;
-    left: 190px;
-}
-
-.circle4 {
-    top: 100px;
-    left: 50px;
-}
-
-.circle5 {
-    top: 100px;
-    left: 120px;
-}
-
-.circle6 {
-    top: 100px;
-    left: 190px;
-}
 
 .outside2 {
-    position: relative; /* 讓圓形的絕對定位基於這個容器 */
-    width: fit-content; /* 自動適應內容的大小 */
-    margin: 0 auto; /* 讓圖片居中 */
+    position: relative;
+    width: 90vw;
+    max-width: 1200px;
 }
 
-.tablePicture{
-    max-height: 90vh;
+.tablePicture {
+    width: 30%;
+    height: auto;
     display: block;
-    
-    
-   
+    position: relative;
+    margin: 0 auto;
 }
 
-.circle{
-    border: solid red 2px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-   
+.circle {
     position: absolute;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 3.7%; /* 改成相對於螢幕寬度的單位 */
+    height: 5%;
+    display: flex;
     display: none;
-    
-    
 }
+
+/* 使用百分比定位，每個circle相對於外部容器進行定位 */
+.circle1 { top: 22.1%; left: 35.31%; }
+.circle2 { top: 22.1%; left: 40.5%; }
+.circle3 { top: 22.1%; left: 45.7%; }
+.circle4 { top: 28%; left: 35.31%; }
+.circle5 { top: 28%; left: 40.5%; }
+.circle6 { top: 28%; left: 45.7%; }
+.circle7 { top: 33.4%; left: 35.31%; }
+.circle8 { top: 33.4%; left: 40.5%; }
+.circle9 { top: 33.4%; left: 45.7%; }
+.circle10 { top: 38.3%; left: 35.31%; }
+.circle11 { top: 38.3%; left: 40.5%; }
+.circle12 { top: 38.3%; left: 45.7%; }
+.circle13 { top: 46.1%; left: 35.31%; }
+.circle14 { top: 46.1%; left: 40.5%; }
+.circle15 { top: 46.1%; left: 45.7%; }
+.circle16 { top: 51.6%; left: 35.31%; }
+.circle17 { top: 51.6%; left: 40.5%; }
+.circle18 { top: 51.6%; left: 45.7%; }
+.circle19 { top: 58.65%; left: 35.31%; }
+.circle20 { top: 58.65%; left: 40.5%; }
+.circle21 { top: 58.65%; left: 45.7%; }
+.circle22 { top: 63.5%; left: 35.31%; }
+.circle23 { top: 63.5%; left: 40.5%; }
+.circle24 { top: 63.5%; left: 45.7%; }
+.circle25 { top: 69.6%; left: 35.31%; }
+.circle26 { top: 69.6%; left: 40.5%; }
+.circle27 { top: 69.6%; left: 45.7%; }
+.circle28 { top: 75%; left: 35.31%; }
+.circle29 { top: 75%; left: 40.5%; }
+.circle30 { top: 75%; left: 45.7%; }
+.circle31 { top: 80.7%; left: 45.5%; }
+.circle32 { top: 22.7%; left: 54.5%; }
+.circle33 { top: 28%; left: 54.5%; }
+.circle34 { top: 33.4%; left: 54.5%; }
+.circle35 { top: 33.2%; left: 60.5%; }
+.circle36 { top: 38.6%; left: 54.5%; }
+.circle37 { top: 38.6%; left: 60.5%; }
+.circle38 { top: 46.1%; left: 54.5%; }
+.circle39 { top: 51.6%; left: 54.5%; }
+.circle40 { top: 58.65%; left: 54.5%; }
+.circle41 { top: 63.5%; left: 54.5%; }
+.circle42 { top: 69.6%; left: 54.5%; }
+.circle43 { top: 75%; left: 54.5%; }
+
