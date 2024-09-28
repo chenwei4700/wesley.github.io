@@ -20,9 +20,9 @@
             <li><b>請選擇姓名或是買桌單位、姓名</b></li>
         </div>
         <div class="button">
-            <button type="button" class="btn btn-outline-primary"
+            <button type="button" class="btn btn-outline-primary "
                 onclick="document.querySelector('label').innerHTML=`姓名`">姓名</button>
-            <button type="button" class="btn btn-outline-primary"
+            <button type="button" class="btn btn-outline-primary "
                 onclick="document.querySelector('label').innerHTML=`買桌單位、姓名`">買桌單位、姓名</button>
         </div>
         <div>
@@ -49,13 +49,109 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
     <script>
-        const guestname = [{ name: "a", tableNumber: "1" }, { name: "b", tableNumber: 1 }, { name: "c", tableNumber: 1 }, { name: "d", tableNumber: 1 },]
-        const church = [{ name: "北魏", tableNumber: 1 }, { name: "南魏", tableNumber: 2 }, { name: "西魏", tableNumber: 3 }, { name: "東魏", tableNumber: 4 }, { name: "東魏", tableNumber: 5 }, { name: "東魏", tableNumber: 6 }]
+        const guestname = [
+            { name: "吳佩芸", tableNumber: 1 }, { name: "朴明淑", tableNumber: 1 }, { name: "金美景", tableNumber: 1 }, { name: "高思凱", tableNumber: 1 }, { name: "賴宜芬", tableNumber: 1 }, { name: "林裕恩", tableNumber: 1 }, { name: "林添福", tableNumber: 1 }, { name: "林惠斐", tableNumber: 1 }, { name: "楊國展", tableNumber: 1 }, { name: "康培民", tableNumber: 1 }
+            , { tableNumber: 2, name: "焦牧師" }, { tableNumber: 2, name: "張牧師" }, { tableNumber: 2, name: "田牧師" }, { tableNumber: 2, name: "張達能" }
+            , { tableNumber: 3, name: "瞿守理" }, { tableNumber: 3, name: "王媄妏" }, { tableNumber: 3, name: "陳嘉蕙" }, { tableNumber: 3, name: "藍恩琪" }, { tableNumber: 3, name: "林慧君" }, { tableNumber: 3, name: "石珊碧" }
+            , { tableNumber: 6, name: "范繼宗" }, { tableNumber: 6, name: "江惠蘭" }, { tableNumber: 6, name: "葉薇心" }
+            , { tableNumber: 7, name: "牧師大姐" }, { tableNumber: 7, name: "Anna" }, { tableNumber: 7, name: "傅彗倫" }, { tableNumber: 7, name: "郝德春" }, { tableNumber: 7, name: "呂銘華" }, { tableNumber: 7, name: "劉宜堃" }, { tableNumber: 7, name: "常喜傳" }, { tableNumber: 7, name: "李德慧" }
+            , { tableNumber: 10, name: "曾婷彰Elu" }, { tableNumber: 10, name: "劉文欽" }, { tableNumber: 10, name: "劉悅安" }, { tableNumber: 10, name: "陳嬿伊" }, { tableNumber: 10, name: "羅國彰" }, { tableNumber: 10, name: "羅立殷" }, { tableNumber: 10, name: "胡昌祐" }, { tableNumber: 10, name: "殷荐致" }, { tableNumber: 10, name: "徐郁倫" }, { tableNumber: 10, name: "李祥瑞" }
+            , { tableNumber: 11, name: "郭一鈴" }, { tableNumber: 11, name: "張伯逢" }, { tableNumber: 11, name: "高宏昌" }, { tableNumber: 11, name: "曾孟魏" }, { tableNumber: 11, name: "董禮成" }, { tableNumber: 11, name: "沈青蓉" }, { tableNumber: 11, name: "吳翊綸" }, { tableNumber: 11, name: "吳冠龍" }
+            , { tableNumber: 12, name: "林佩瑩" }, { tableNumber: 12, name: "楊佳雯" }, { tableNumber: 12, name: "林尤敏" }, { tableNumber: 12, name: "趙世忠" }, { tableNumber: 12, name: "熊錦雯" }, { tableNumber: 12, name: "阮耀飛" }, { tableNumber: 12, name: "Tina 范" }, { tableNumber: 12, name: "徐渧薽" }
+            , { tableNumber: 13, name: "天睿" }, { tableNumber: 13, name: "天皓" }, { tableNumber: 13, name: "孝元" }, { tableNumber: 13, name: "晴如" }, { tableNumber: 13, name: "渝鈞" }, { tableNumber: 13, name: "橘子" }, { tableNumber: 13, name: "富暘" }, { tableNumber: 13, name: "心瑜" }, { tableNumber: 13, name: "文儀" }, { tableNumber: 13, name: "Carter" }
+            , { name: "以愛", tableNumber: 14 }, { name: "以呈", tableNumber: 14 }, { name: "欣怡", tableNumber: 14 }, { name: "榮清", tableNumber: 14 }, { name: "素卿", tableNumber: 14 }, { name: "主恩", tableNumber: 14 }, { name: "首聰", tableNumber: 14 }, { name: "吳麗華", tableNumber: 14 }, { name: "榮欽", tableNumber: 14 }, { name: "斐茵", tableNumber: 14 }, { name: "鳳珠", tableNumber: 14 }
+            , { tableNumber: 15, name: "顧啟聖" }, { tableNumber: 15, name: "李婉玲" }, { tableNumber: 15, name: "熊立梅" }, { tableNumber: 15, name: "曹冀婷" }, { tableNumber: 15, name: "廖昱茜" }, { tableNumber: 15, name: "謝采婕" }, { tableNumber: 15, name: "張詠梅" }, { tableNumber: 15, name: "陳桂琴" }, { tableNumber: 15, name: "李英華" }, { tableNumber: 15, name: "林嘉珮" }
+            , { name: "喬音", tableNumber: 16 }, { name: "宣諭", tableNumber: 16 }, { name: "若伊", tableNumber: 16 }, { name: "聖強", tableNumber: 16 }, { name: "長蓉", tableNumber: 16 }, { name: "長蓉爸", tableNumber: 16 }, { name: "長蓉媽", tableNumber: 16 }, { name: "璽文", tableNumber: 16 }, { name: "璽元", tableNumber: 16 }, { name: "宏毅", tableNumber: 16 }, { name: "瀅帆", tableNumber: 16 }
+            , { name: "禹晨", tableNumber: 17 }, { name: "玨辰", tableNumber: 17 }, { name: "芯樂", tableNumber: 17 }, { name: "家宏", tableNumber: 17 }, { name: "雅榆", tableNumber: 17 }, { name: "愛雲", tableNumber: 17 }, { name: "志偉", tableNumber: 17 }, { name: "小艷", tableNumber: 17 }, { name: "惠茹", tableNumber: 17 }, { name: "麗美", tableNumber: 17 }
+            , { name: "蹦", tableNumber: 18 }, { name: "嘟", tableNumber: 18 }, { name: "羽妍", tableNumber: 18 }, { name: "惠民", tableNumber: 18 }, { name: "為樂", tableNumber: 18 }, { name: "為珍", tableNumber: 18 }, { name: "文彥", tableNumber: 18 }, { name: "睦慕", tableNumber: 18 }, { name: "韋中", tableNumber: 18 }, { name: "蕙琦", tableNumber: 18 }
+            , { tableNumber: 19, name: "李若文" }, { tableNumber: 19, name: "鄭麗弟" }, { tableNumber: 19, name: "張家勝" }, { tableNumber: 19, name: "簡玉雲" }, { tableNumber: 19, name: "鄭麗華" }, { tableNumber: 19, name: "鄭麗華" }, { tableNumber: 19, name: "童素燕" }, { tableNumber: 19, name: "何玉華" }, { tableNumber: 19, name: "李摩西" }, { tableNumber: 19, name: "陳淑芬" }
+            , { name: "李以琳", tableNumber: 20 }, { name: "鄭沂珊", tableNumber: 20 }, { name: "王淑珍", tableNumber: 20 }, { name: "葉妮", tableNumber: 20 }, { name: "翁昕瑀", tableNumber: 20 }
+            , { name: "楊世昌", tableNumber: 21 }, { name: "馮靚怡", tableNumber: 21 }, { name: "楊昀芊", tableNumber: 21 }, { name: "楊舒詠", tableNumber: 21 }, { name: "楊恩煦", tableNumber: 21 }, { name: "曾以勒", tableNumber: 21 }, { name: "林文琪", tableNumber: 21 }, { name: "曾約", tableNumber: 21 }, { name: "曾晴", tableNumber: 21 }
+            , { name: "賴明貞", tableNumber: 22 }, { name: "王桂蘭", tableNumber: 22 }, { name: "王慧娟", tableNumber: 22 }, { name: "鄭允齊", tableNumber: 22 }, { name: "何霏霏", tableNumber: 22 }, { name: "蔣多加", tableNumber: 22 }, { name: "林明達", tableNumber: 22 }, { name: "蔡郁玟", tableNumber: 22 }, { name: "黃國城", tableNumber: 22 }, { name: "鍾懷玉", tableNumber: 22 }
+            , { name: "許敏如", tableNumber: 23 }, { name: "王勠俐", tableNumber: 23 }, { name: "鍾玉蘭", tableNumber: 23 }, { name: "吳丕雄", tableNumber: 23 }, { name: "陳百合", tableNumber: 23 }, { name: "王政", tableNumber: 23 }, { name: "張無雙", tableNumber: 23 }, { name: "趙子嫻", tableNumber: 23 }, { name: "謝育展", tableNumber: 23 }, { name: "王品鈞", tableNumber: 23 }
+            , { name: "張曉平", tableNumber: 24 }, { name: "王光玉", tableNumber: 24 }, { name: "陳立玫", tableNumber: 24 }, { name: "王佳琪", tableNumber: 24 }, { name: "麻文章", tableNumber: 24 }, { name: "張韻瓊", tableNumber: 24 }, { name: "林珍蕙", tableNumber: 24 }, { name: "范渝芳", tableNumber: 24 }, { name: "黃雲秀", tableNumber: 24 }, { name: "葉千芊", tableNumber: 24 }
+            , { name: "陳育盟", tableNumber: 25 }, { name: "邱以涵", tableNumber: 25 }, { name: "白士杰", tableNumber: 25 }, { name: "王榮志", tableNumber: 25 }, { name: "朱永濤", tableNumber: 25 }, { name: "林昭理", tableNumber: 25 }, { name: "陳世宏", tableNumber: 25 }, { name: "陳世宏", tableNumber: 25 }, { name: "張文謙", tableNumber: 25 }, { name: "王昭珷", tableNumber: 25 }
+            , { name: "林子豪", tableNumber: 26 }, { name: "蕭婷", tableNumber: 26 }, { name: "陳昆昭", tableNumber: 26 }, { name: "陳啓誠", tableNumber: 26 }, { name: "林攸雯", tableNumber: 26 }, { name: "林美玉", tableNumber: 26 }, { name: "劉珊玲", tableNumber: 26 }, { name: "楊証淮", tableNumber: 26 }, { name: "魏杏芳", tableNumber: 26 }, { name: "劉倩玲", tableNumber: 26 }
+            , { name: "王永慶", tableNumber: 27 }, { name: "吳淑玫", tableNumber: 27 }, { name: "王聰慧", tableNumber: 27 }, { name: "張耀賢", tableNumber: 27 }, { name: "牧師", tableNumber: 27 }, { name: "師母", tableNumber: 27 }, { name: "賴雨萱", tableNumber: 27 }, { name: "宋富傑", tableNumber: 27 }, { name: "宋承恩", tableNumber: 27 }
+            , { name: "李佩俽", tableNumber: 28 }, { name: "葉家瑋", tableNumber: 28 }, { name: "林佳燁", tableNumber: 28 }, { name: "林可中", tableNumber: 28 }, { name: "培英媽媽", tableNumber: 28 }, { name: "林培英", tableNumber: 28 }, { name: "林枝燕", tableNumber: 28 }, { name: "謝嘉宜", tableNumber: 28 }, { name: "王培貽", tableNumber: 28 }, { name: "陳揚珊", tableNumber: 28 }
+            , { name: "范晨聆", tableNumber: 29 }, { name: "范晨悅", tableNumber: 29 }, { name: "盧紀竹", tableNumber: 29 }, { name: "李敏慈", tableNumber: 29 }, { name: "張桐慶", tableNumber: 29 }, { name: "王昱蓉", tableNumber: 29 }, { name: "徐恬慧", tableNumber: 29 }, { name: "王恩婕", tableNumber: 29 }, { name: "王惠妤", tableNumber: 29 }
+            , { name: "楊國正", tableNumber: 32 }, { name: "142", tableNumber: 32 }, { name: "143", tableNumber: 32 }, { name: "144", tableNumber: 32 }, { name: "145", tableNumber: 32 }, { name: "146", tableNumber: 32 }, { name: "147", tableNumber: 32 }, { name: "148", tableNumber: 32 }, { name: "149", tableNumber: 32 }, { name: "150", tableNumber: 32 }
+            , { name: "張效銘", tableNumber: 33 }
+            , { name: "李子牧", tableNumber: 34 }, { name: "葉翰輝", tableNumber: 34 }, { name: "朱昌華", tableNumber: 34 }, { name: "劉淑華", tableNumber: 34 }, { name: "宋宏煦", tableNumber: 34 }, { name: "牟維丹", tableNumber: 34 }, { name: "李子愛", tableNumber: 34 }, { name: "陳奕安", tableNumber: 34 }, { name: "謝佽蓉", tableNumber: 34 }, { name: "李子悅", tableNumber: 34 }
+            , { name: "侯覺", tableNumber: 35 }, { name: "李大程", tableNumber: 35 }, { name: "李師母", tableNumber: 35 }, { name: "李怡瑱", tableNumber: 35 }, { name: "王玉香", tableNumber: 35 }, { name: "王玉香", tableNumber: 35 }, { name: "黃念銘", tableNumber: 35 }, { name: "陶士靜", tableNumber: 35 }
+            , { name: "鄭永華", tableNumber: 36 }, { name: "王曉蘭", tableNumber: 36 }, { name: "王曉剛", tableNumber: 36 }, { name: "馮梅桂", tableNumber: 36 }, { name: "李萬春", tableNumber: 36 }, { name: "陳寧", tableNumber: 36 }, { name: "趙桂梅", tableNumber: 36 }, { name: "沈亨亨", tableNumber: 36 }, { name: "蔡勝弘", tableNumber: 36 }, { name: "唐曼萍", tableNumber: 36 }
+            , { name: "周典芳", tableNumber: 37 }, { name: "周典芳-素", tableNumber: 37 }, { name: "簡信香", tableNumber: 37 }, { name: "林煒辰", tableNumber: 37 }, { name: "郭慧珠", tableNumber: 37 }, { name: "郭慧珠", tableNumber: 37 }, { name: "洪懿珮", tableNumber: 37 }, { name: "葉俊宏", tableNumber: 37 }, { name: "葉柏辰", tableNumber: 37 }
+            , { name: "呂芳諮", tableNumber: 38 }, { name: "黃建豪", tableNumber: 38 }, { name: "黃麗君", tableNumber: 38 }, { name: "阮慧琪", tableNumber: 38 }, { name: "王湘燕", tableNumber: 38 }, { name: "黃秀卿", tableNumber: 38 }, { name: "杜在國", tableNumber: 38 }, { name: "阮慶嵩", tableNumber: 38 }, { name: "阮慧屏", tableNumber: 38 }, { name: "周清菁", tableNumber: 38 }
+            , { name: "趙志儀", tableNumber: 39 }, { name: "蔡明雅", tableNumber: 39 }, { name: "蘇瓊珠", tableNumber: 39 }, { name: "趙蘊容", tableNumber: 39 }, { name: "王綱", tableNumber: 39 }, { name: "呂立威", tableNumber: 39 }, { name: "謝祥永", tableNumber: 39 }, { name: "吳文凱", tableNumber: 39 }, { name: "馮蕙娟", tableNumber: 39 }, { name: "阮靖予", tableNumber: 39 }
+            , { name: "陳妙卿", tableNumber: 40 }, { name: "鄔美連", tableNumber: 40 }, { name: "葉麗貞", tableNumber: 40 }, { name: "施小惠", tableNumber: 40 }, { name: "杜巧雲", tableNumber: 40 }
+            , { name: "張語琛", tableNumber: 41 }, { name: "王建雅", tableNumber: 41 }
+            , { name: "范辰威", tableNumber: 42 }
+            , { name: "陳定宇", tableNumber: 43 }
+
+        ]
+        console.log(guestname.length)
+        const church = [
+            { name: "高衛", tableNumber: 1 },
+            { name: "約翰堂", tableNumber: 2 },
+            { name: "約翰堂", tableNumber: 3 },
+            { name: "大直女聲", tableNumber: 4 },
+            { name: "大直女聲", tableNumber: 5 },
+            { name: "東魏天韻80", tableNumber: 6 },
+            { name: "郝德春", tableNumber: 7 },
+            { name: "王碧玲", tableNumber: 8 },
+            { name: "王碧玲", tableNumber: 9 },
+            { name: "黃琡斐", tableNumber: 10 },
+            { name: "黃琡斐", tableNumber: 11 },
+            { name: "黃琡斐", tableNumber: 12 },
+            { name: "沛恩堂", tableNumber: 13 },
+            { name: "沛恩堂", tableNumber: 14 },
+            { name: "天恩堂", tableNumber: 15 },
+            { name: "沛恩堂", tableNumber: 16 },
+            { name: "沛恩堂", tableNumber: 17 },
+            { name: "沛恩堂", tableNumber: 18 },
+            { name: "恩友堂", tableNumber: 19 },
+            { name: "恩友堂", tableNumber: 20 },
+            { name: "榮恩堂", tableNumber: 21 },
+            { name: "雅各堂", tableNumber: 22 },
+            { name: "國際公禱會", tableNumber: 22 },
+            { name: "木衛", tableNumber: 22 },
+            { name: "安素堂", tableNumber: 23 },
+            { name: "聖保羅堂", tableNumber: 24 },
+            { name: "王昭珷", tableNumber: 25 },
+            { name: "余麗卿", tableNumber: 26 },
+            { name: "國際讀經會", tableNumber: 27 },
+            { name: "李佩俽", tableNumber: 28 },
+            { name: "大直同工", tableNumber: 29 },
+            { name: "安慧婷", tableNumber: 30 },
+            { name: "大直同工", tableNumber: 31 },
+            { name: "好鄰居", tableNumber: 32 },
+            { name: "華愛衛星社", tableNumber: 33 },
+            { name: "北衛", tableNumber: 34 },
+            { name: "大內聯禱會", tableNumber: 35 },
+            { name: "美國七福科技公司", tableNumber: 36 },
+            { name: "大直衛理堂", tableNumber: 37 },
+            { name: "天恩堂", tableNumber: 38 },
+            { name: "天恩堂", tableNumber: 39 },
+            { name: "大直衛理堂", tableNumber: 40 },
+            { name: "大武國小", tableNumber: 41 },
+            { name: "大武國小", tableNumber: 42 },
+            { name: "大武國小新生命", tableNumber: 43 }
+]
+
+
+
+
+
+
+
+
+
+
 
         function table() {
             let input = document.querySelector('input')
             input = input.value
-    
+
 
             let ownTable = []
 
@@ -64,6 +160,7 @@
                     for (let i = 0; i < guestname.length; i++) {
                         if (guestname[i].name === input) {
                             ownTable.push(guestname[i].tableNumber)
+                            break
 
                         }
                     }
@@ -91,7 +188,7 @@
                 }
                 else {
                     document.querySelector(".wrong").style.display = "block"
-                    
+
 
                 }
 
