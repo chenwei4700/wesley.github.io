@@ -303,12 +303,9 @@ button {
         font-size: 15px;
     }
 
-    button{
-        width: 100%;
-
-    }
+    
     .button {
-        width: 70%; /* 讓按鈕在手機上佔滿寬度 */
+        width: 100%; /* 讓按鈕在手機上佔滿寬度 */
         margin-bottom: 15px;
     }
 
