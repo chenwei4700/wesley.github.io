@@ -29,61 +29,7 @@ body {
     position: relative;
 }
 
-.circle1 {
-    top: 20px; /* 圓形相對於圖片的位置 */
-    left: 50px;
-}
 
-.circle2 {
-    top: 20px;
-    left: 120px;
-}
-
-.circle3 {
-    top: 20px;
-    left: 190px;
-}
-
-.circle4 {
-    top: 100px;
-    left: 50px;
-}
-
-.circle5 {
-    top: 100px;
-    left: 120px;
-}
-
-.circle6 {
-    top: 100px;
-    left: 190px;
-}
-
-.outside2 {
-    position: relative; /* 讓圓形的絕對定位基於這個容器 */
-    width: fit-content; /* 自動適應內容的大小 */
-    margin: 0 auto; /* 讓圖片居中 */
-}
-
-.tablePicture{
-    max-height: 90vh;
-    display: block;
-    
-    
-   
-}
-
-.circle{
-    border: solid red 2px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-   
-    position: absolute;
-    display: none;
-    
-    
-}
 
 .wrong{
     font-size: 20px;
