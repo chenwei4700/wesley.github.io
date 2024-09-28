@@ -13,23 +13,52 @@
 
 <body>
     <div class="outside2">
-        <img class="tablePicture" src="桌次.jpg" alt="...">
+        <img class="tablePicture" src="桌次.jpg" alt="座位圖">
+        <!-- 高衛 1 - 10 -->
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
         <div class="circle circle3"></div>
         <div class="circle circle4"></div>
         <div class="circle circle5"></div>
         <div class="circle circle6"></div>
+        <div class="circle circle7"></div>
+        <div class="circle circle8"></div>
+        <div class="circle circle9"></div>
+        <div class="circle circle10"></div>
+        <div class="circle circle11"></div>
+        <div class="circle circle12"></div>
+        <div class="circle circle13"></div>
+        <div class="circle circle14"></div>
+        <div class="circle circle15"></div>
+        <div class="circle circle16"></div>
+        <div class="circle circle17"></div>
+        <div class="circle circle18"></div>
+        <div class="circle circle19"></div>
+        <div class="circle circle20"></div>
+        <div class="circle circle21"></div>
+        <div class="circle circle22"></div>
+        <div class="circle circle23"></div>
+        <div class="circle circle24"></div>
+        <div class="circle circle25"></div>
+        <div class="circle circle26"></div>
+        <div class="circle circle27"></div>
+        <div class="circle circle28"></div>
+        <div class="circle circle29"></div>
+        <div class="circle circle30"></div>
+        <div class="circle circle31"></div>
+        <div class="circle circle32"></div>
+        <div class="circle circle33"></div>
+        <div class="circle circle34"></div>
+        <div class="circle circle35"></div>
+        <div class="circle circle36"></div>
+        <div class="circle circle37"></div>
+        <div class="circle circle38"></div>
+        <div class="circle circle39"></div>
+        <div class="circle circle40"></div>
+        <div class="circle circle41"></div>
+        <div class="circle circle42"></div>
+        <div class="circle circle43"></div>
     </div>
-
-
-
-
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -37,12 +66,11 @@
         </script>
     <script>
         let TN = JSON.parse(localStorage.getItem("tableNumber"))
-        console.log(typeof(TN)) 
+        console.log(typeof (TN))
         for (let i = 0; i < TN.length; i++) {
             document.querySelector(`.circle${TN[i]}`).style.display = 'block'
-
-
         }
+        localStorage.removeItem('tableNumber')
     </script>
 
 
