@@ -287,8 +287,8 @@ button {
     }
 
     .img-text-container img {
-        width: 30px;
-        height: 60px;
+        width: 20px;
+        height: 40px;
     }
 
     .outside li {
@@ -300,11 +300,11 @@ button {
 
     .img-text-container h2 {
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 15px;
     }
 
     button{
-        width: 49%;
+        width: 100%;
 
     }
     .button {
