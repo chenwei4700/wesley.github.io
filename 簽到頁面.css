@@ -22,7 +22,7 @@ body {
 .outside {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 500px;
     height: 700px;
     background-color: #fff;
     padding: 20px;
@@ -123,12 +123,12 @@ body {
 }
 
 button {
-    width: 270px;
+    width: 220px;
 }
 
 .button{
     margin-bottom: 10px;
-    width: 550px;
+    width: 450px;
 }
 
 .sent {
@@ -138,7 +138,7 @@ button {
 }
 
 .wrapper {
-    width: 550px;
+    width: 450px;
     background-color: #fff;
     padding: 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
