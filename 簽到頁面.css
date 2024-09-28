@@ -304,7 +304,7 @@ button {
     }
 
     
-    .button {
+    button,.button {
         width: 100%; /* 讓按鈕在手機上佔滿寬度 */
         margin-bottom: 15px;
     }
