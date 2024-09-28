@@ -48,8 +48,8 @@ body {
 }
 
 .img-text-container img {
-    width: 45px;
-    height: 90px;
+    max-width: 60px;
+    max-height: 130px;
 
 }
 
