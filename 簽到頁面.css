@@ -282,22 +282,33 @@ button {
     }
 
     .img-text-container {
-        flex-direction: column; /* 圖片和文字在手機上垂直排列 */
+        
         text-align: center;
     }
 
     .img-text-container img {
-        width: 40px;
-        height: 80px;
+        width: 30px;
+        height: 60px;
     }
+
+    .outside li {
+    
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
 
     .img-text-container h2 {
         margin-top: 10px;
         font-size: 18px;
     }
 
-    button, .button {
-        width: 100%; /* 讓按鈕在手機上佔滿寬度 */
+    button{
+        width: 49%;
+
+    }
+    .button {
+        width: 70%; /* 讓按鈕在手機上佔滿寬度 */
         margin-bottom: 15px;
     }
 
@@ -328,7 +339,12 @@ button {
         width: 100%;
     }
 
-    button, .button {
-        width: 100%;
+    button{
+        width: 49%;
+
+    }
+    .button {
+        width: 70%; /* 讓按鈕在手機上佔滿寬度 */
+        margin-bottom: 15px;
     }
 }
