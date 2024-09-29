@@ -166,6 +166,9 @@ button {
     
      .button .btn {
         font-size: 13px; /* 設定字體大小 */
+        
+    }
+    .button{
         width: 100%;
     }
 
