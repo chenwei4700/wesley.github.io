@@ -169,6 +169,7 @@ button {
         
     }
     .button{
+        display: flex;
         width: 100%;
     }
 
