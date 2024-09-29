@@ -32,12 +32,11 @@ body {
     border-radius: 50%;
     width: 3.7%; /* 改成相對於螢幕寬度的單位 */
     height: 5%;
-    display: flex;
     display: none;
     text-align: center;
     justify-content: center;
     background-color: white;
-    font-size: 2%;
+    font-size: 50%;
 }
 
 /* 使用百分比定位，每個circle相對於外部容器進行定位 */
