@@ -85,3 +85,15 @@ body {
 .circle42 { top: 69.6%; left: 54.5%; }
 .circle43 { top: 75%; left: 54.5%; }
 
+@media (max-width: 768px) {
+
+    .circle{
+        font-size: 50%;
+
+
+    }
+    
+
+}
+
+
