@@ -36,7 +36,6 @@ body {
     text-align: center;
     justify-content: center;
     background-color: white;
-    font-size: 50%;
 }
 
 /* 使用百分比定位，每個circle相對於外部容器進行定位 */
