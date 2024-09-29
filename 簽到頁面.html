@@ -150,7 +150,7 @@
             if(list.length > 0){      
                 if(confirm("您是" + list[0].name + "嗎?") == true){
                     alert("您的桌號為" + list[0].tableNumber + "桌");
-                    localStorage.setItem("tableNumber", JSON.stringify(list[0].tableNumber))
+                    localStorage.setItem("tableNumber", JSON.stringify([list[0].tableNumber]))
                         window.location.href = "table.html";
                 }else{
                     list.splice(0, 1);
