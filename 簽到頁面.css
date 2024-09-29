@@ -153,29 +153,30 @@ button {
 
     .outside li {
     
-        margin-bottom: 7px;
-        font-size: 17px;
+        margin-bottom: 10px;
+        font-size: 18px;
     }
 
 
     .img-text-container h2 {
         margin-top: 10px;
-        font-size: 22px;
+        font-size: 23px;
     }
 
     
-     .button .btn {
-        font-size: 13px; /* 設定字體大小 */
-        
+    .button .btn {
+        font-size: 10px; /* 設定字體大小 */
     }
+
+    button{
+        width: 40%;
+    }
+
     .button{
+        width: 50%;
         display: flex;
-        width: 100%;
     }
 
-    
-
-    
 
     .wrapper {
         width: 100%;
@@ -205,11 +206,12 @@ button {
     }
 
     button{
-        width: 49%;
+        width: 50%;
 
     }
     .button {
-        width: 70%; /* 讓按鈕在手機上佔滿寬度 */
+        display: flex;
+        width: 100%; /* 讓按鈕在手機上佔滿寬度 */
         margin-bottom: 15px;
     }
 }
