@@ -166,15 +166,12 @@ button {
     
      .button .btn {
         font-size: 13px; /* 設定字體大小 */
-        width: 49%;
+        width: 100%;
     }
 
     
 
-    .button{
-        width: 130%;
-        display: flex;
-    }
+    
 
     .wrapper {
         width: 100%;
