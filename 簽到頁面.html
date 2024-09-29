@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="簽到頁面.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <li><b>請選擇姓名或是買桌單位、姓名</b></li>
         </div>
         <div class="button">
-            <button type="button" class="btn btn-outline-primary "
+            <button id="name" type="button" class="btn btn-outline-primary "
                 onclick="document.querySelector('label').innerHTML=`姓名`">姓名</button>
             <button type="button" class="btn btn-outline-primary "
                 onclick="document.querySelector('label').innerHTML=`買桌單位、姓名`">買桌單位、姓名</button>
@@ -31,7 +32,7 @@
 
         <div class="wrapper">
             <div class="input-data">
-                <input type="text" required>
+                <input id="search" type="text" required>
                 <div class="underline"></div>
                 <label></label>
             </div>
@@ -39,8 +40,8 @@
         <div class="sent">
             <button type="button" class="btn btn-primary" onclick="table()">確認送出</button>
         </div>
-        <div class="wrong">
-            <b>輸入錯誤，請重新輸入</b>
+        <div id="wrong" class="wrong" style="display: none;">
+            <b>查無此人</b>
         </div>
 
     </div>
@@ -49,6 +50,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
     <script>
+        $('#search').val('');
+        $('#search').on( "change", function() {
+            $('#wrong').hide();
+        } );
+        document.querySelector('label').innerHTML=`姓名`
         const guestname = [
             { name: "吳佩芸", tableNumber: 1 }, { name: "朴明淑", tableNumber: 1 }, { name: "金美景", tableNumber: 1 }, { name: "高思凱", tableNumber: 1 }, { name: "賴宜芬", tableNumber: 1 }, { name: "林裕恩", tableNumber: 1 }, { name: "林添福", tableNumber: 1 }, { name: "林惠斐", tableNumber: 1 }, { name: "楊國展", tableNumber: 1 }, { name: "康培民", tableNumber: 1 }
             , { tableNumber: 2, name: "焦牧師" }, { tableNumber: 2, name: "張牧師" }, { tableNumber: 2, name: "田牧師" }, { tableNumber: 2, name: "張達能" }
@@ -136,13 +142,59 @@
             { name: "大武國小", tableNumber: 41 },
             { name: "大武國小", tableNumber: 42 },
             { name: "大武國小新生命", tableNumber: 43 }
-]
+        ]
 
 
 
+        function confirmName(list){
+            if(list.length > 0){      
+                if(confirm("您是" + list[0].name + "嗎?") == true){
+                    alert("您的桌號為" + list[0].tableNumber + "桌");
+                    localStorage.setItem("tableNumber", JSON.stringify(list[0].tableNumber))
+                        window.location.href = "table.html";
+                }else{
+                    list.splice(0, 1);
+                    confirmName(list);
+                }
+            }else{
+                $('#wrong').show();
+            }
+        }
+        function unique(list) {
+            var result = [];
+            var nameSet = new Set();
+            list.forEach(element => {
+                if(!nameSet.has(list.name)){
+                    nameSet.add(list.name);
+                    result.push(element);
+                }
+            });
+            return result;
+        }
+        function confirmTable(list){
+            if(list.length > 0){
+                if(confirm("您是" + list[0].name + "嗎?") == true){
+                    getTable(list[0].name);
+                }else{
+                    list.splice(0, 1);
+                    confirmTable(list);
+                }
+            }else{
+                $('#wrong').show();
+            }
+        }
 
-
-
+        function getTable(tableName){
+            var ownTable=[];
+            for (let i = 0; i < church.length; i++) {
+                if (church[i].name === tableName) {
+                    ownTable.push(church[i].tableNumber)
+                }
+            }
+            alert("您的桌號為" + ownTable.join("、") + "桌")
+            localStorage.setItem("tableNumber", JSON.stringify(ownTable))
+            window.location.href = "table.html";
+        }
 
 
 
@@ -156,42 +208,30 @@
             let ownTable = []
 
             if (document.querySelector('label').innerHTML === '姓名') {
-                if (guestname.some(gn => gn.name === input)) {
-                    for (let i = 0; i < guestname.length; i++) {
-                        if (guestname[i].name === input) {
-                            ownTable.push(guestname[i].tableNumber)
-                            break
-
-                        }
+                for (let i = 0; i < guestname.length; i++) {
+                    if (guestname[i].name.indexOf(input)!= -1) {
+                        ownTable.push(guestname[i])
                     }
-                    alert("您的桌號為" + ownTable.join("、") + "桌")
-                    localStorage.setItem("tableNumber", JSON.stringify(ownTable))
-                    window.location.href = "table.html";
                 }
-                else {
-                    document.querySelector(".wrong").style.display = "block"
-
+                if(ownTable.length>0){
+                    confirmName(ownTable);
+                }else{
+                    $('#wrong').show();
                 }
 
 
             } else {
-                if (church.some(gn => gn.name === input)) {
-                    for (let i = 0; i < church.length; i++) {
-                        if (church[i].name === input) {
-                            ownTable.push(church[i].tableNumber)
-
-                        }
+                for (let i = 0; i < church.length; i++) {
+                    if (church[i].name.indexOf(input)!= -1) {
+                        ownTable.push(church[i])
                     }
-                    alert("您的桌號為" + ownTable.join("、") + "桌")
-                    localStorage.setItem("tableNumber", JSON.stringify(ownTable))
-                    window.location.href = "table.html";
                 }
-                else {
-                    document.querySelector(".wrong").style.display = "block"
-
-
+                if(ownTable.length > 0){
+                    var uniqueTable = unique(ownTable);
+                    confirmTable(uniqueTable);
+                }else{
+                    $('#wrong').show();
                 }
-
             }
 
 
