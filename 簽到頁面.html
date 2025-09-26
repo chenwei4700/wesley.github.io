@@ -71,6 +71,9 @@
         const nameQueryBtn = document.getElementById('nameQueryBtn');
         const noteQueryBtn = document.getElementById('noteQueryBtn');
         const submitBtn = document.getElementById('submitBtn');
+        function hideLoadingMessage() { // 確保這個函數也存在
+        loadingMessage.style.display = 'none';
+    }
 
         // 頁面載入時設定預設標籤
         document.addEventListener('DOMContentLoaded', () => {
@@ -178,16 +181,45 @@
             errorMessage.style.display = 'none';
             successMessage.style.display = 'none';
         }
+                function clearMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+            loadingMessage.style.display = 'none';
+            successMessage.innerHTML = '<b></b>'; // 清空成功訊息內容
+        }
 
-        // 修改頁面標題
-        // 因為 document.lastModified 在本地檔案可能不準確，建議在伺服器端生成或直接硬編碼
-        // 如果您希望它動態顯示，確保此HTML是在一個Web伺服器上。
-        // 對於本地文件，它通常是文件最後修改時間。
-        const studentInfo = "您的系級加姓名"; // 請替換成您的資訊
-        document.title = `${studentInfo} 於 ${document.lastModified} 定稿期末網站企劃書`;
+        function showErrorMessage(message) {
+            errorMessage.innerHTML = `<b>${message}</b>`;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+            loadingMessage.style.display = 'none';
+        }
+
+        function showSuccessMessage(message) {
+            successMessage.innerHTML = `<b>${message}</b>`;
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            loadingMessage.style.display = 'none';
+        }
+
+        function showLoadingMessage(message) {
+            loadingMessage.innerHTML = `<b>${message}</b>`;
+            loadingMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+
+        // --- 請添加這個函數 ---
+        function hideLoadingMessage() {
+            loadingMessage.style.display = 'none';
+        }
+        // --- 請添加這個函數 ---
+
+        // ... 後續的代碼保持不變 ...
 
     </script>
 </body>
 
 </html>
+
 
